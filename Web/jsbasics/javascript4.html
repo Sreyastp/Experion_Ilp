@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td> First name</td>
+            <td> <input type="text" id="name" onkeyup="validate();"/></td>
+            <td><div id="errFirst"></div></td>
+        </tr>
+
+        <tr>
+            <td>second name</td>
+            <td> <input type="text" id="secondname" onkeyup="validate();"/></td>
+            <td><div id="errLast"></div></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td> <input type="text" id="email" onkeyup="validate();"/></td>
+            <td><div id="errEmail"></div></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td> <input type="text" id="password" onkeyup="validate();"/></td>
+            <td><div id="errPassword"></div></td>
+        </tr>
+
+        <tr>
+            <td> confirm password</td>
+            <td> <input type="text" id="confirmpassword" onkeyup="validate();"/></td>
+            <td><div id="errConfirm"></div></td>
+        </tr>
+
+        <tr>
+            <td> <input type="button" id="create" value="Create" onclick="validate();"/></td>
+           
+            <td><div id="errfinal"></div></td>
+        </tr>
+    </table>
+
+    <script>
+        var divs= new Array();
+        divs[0]="errFirst";
+        divs[1]="errLast";
+        divs[2]="errPassword";
+        divs[3]="errConfirm";
+        divs[4]="errFinal";
+     
+
+        
+
+        function validate(){
+
+        }
+    </script>
+</body>
+</html>

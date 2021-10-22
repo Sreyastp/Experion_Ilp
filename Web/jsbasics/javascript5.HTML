@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!------stylesheet-->
+    <link href="bootstrap.min.css" rel="stylesheet"/>
+    <title>Login here</title>
+
+
+    <!--     javasrcipt-->
+    <script type="text/javascript">
+    function validateForm(){
+
+        var un = document.frmLogin.uname.value;
+        var pwd = document.frmLogin.password.value;
+
+        //check conditions
+        if(un==null || un==""){
+            alert("name cant be blank");
+            document.frmLogin.uname.focus();
+            return false;
+
+        }
+        else if(pwd.length<6){
+                alert("password must be atlest 6 cahrs long")
+                document.frmLogin.password.focus();
+                return false;
+
+
+        }
+
+    }
+    
+    
+    </script>
+
+
+</head>
+<body>
+<h1 align="center"> Login Form </h1>
+
+<!--form for login       -->
+
+<form name ="frmLogin" method="post"
+    action="    "
+    onsubmit="return validateForm()">
+
+
+
+    <table align="center" cellpadding="8">
+
+
+        <tr>
+            <td> Name</td>
+            <td><input type ="text " name ="uname" autocomplete="off" class="form-control" 
+            oninvalid="this.setCustomValidity('Enter User Name')"
+            oninput="setCustomValidity('')" required>  </td>  
+        </tr>
+        
+        <tr>
+            <td>Password</td>
+            <td ><input type ="password" name ="password" class="form-control" aria-required="true" required>  </td>
+        </tr>
+
+      
+        <tr>
+
+            <td> </td>
+            <td>
+                <input type="submit"
+                value="login"
+                class="btn btn-primary btn-lg">
+
+            </td>
+
+        </tr>
+
+
+
+    </table>
+
+
+
+
+
+</form>
+
+
+
+
+
+</body>
+
+
+
+
+</html>

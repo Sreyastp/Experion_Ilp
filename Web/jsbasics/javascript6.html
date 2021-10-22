@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        .required{
+
+            color: rebeccapurple;
+
+        }
+
+    </style>
+    
+
+
+    <!--Javascript-->
+    <script>
+        function matchPassword{
+
+        }
+    var firstpassword = document.frmReg.password.value
+    var firstpassword = document.frmReg.pwVerified.value
+
+    //check condition
+
+    if(firstpassword==secondpassword){
+        return true;
+    }
+    else{
+        alert("password must be same")
+        document.getElementById("txtPwVerified").focus();
+        return false;
+    }
+
+    //get data function
+    function getData(){
+        var name= document.getElementById("txtName").value
+        var country= document.getElementById("selCountry").value
+        var email= document.getElementById("txtEmail").value
+        var password= document.getElementById("txtPassword").value
+        var phone= document.getElementById("txtPhone").value
+        var dob= document.getElementById("txtBirthday").value
+        
+            //saving the values in local storage
+            localStorage.setItem("txtNam",name);
+            localStorage.setItem("selCountr",country);
+            localStorage.setItem("txtEmail",email);
+            localStorage.setItem("txtPasswor",password);
+            localStorage.setItem("txtPhon",phone);
+            localStorage.setItem("txtBirthDa",dob);
+
+
+    }
+
+
+    </script>
+
+
+
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <div class="form-group mx-auto" style="width: 50%;">
+    <h2>PERSONAL details</h2>
+
+    <!-- entry form-->
+    <form id="frmReg" name="frmReg" method="get"
+            action="displayinfo.html"
+            onsubmit="return matchPassword()">
+
+
+            <table class="table table-striped">
+                <!--name -->
+                <tr>
+
+                    <td>
+                        <label for="txtName">Name
+
+                            <span class="required "></span>
+                        </label>
+                    </td>
+                    <td>
+
+                        <input type="text" id="txtname" name="name" required placeholder="Enter name"
+                        autocomplete="off"
+                        pattern="[A-Za-Z0-0]+"
+                        autofocus
+                        class="form-control"
+                        
+                        >
+                    </td>
+                </tr>
+
+
+                <!--zipcode -->
+
+                <tr>
+                    <td>
+                        <label for="txtZipcode">
+
+                            zipcode <span class="required"></span>
+                        </label>
+
+
+
+                        
+                    </td>
+
+                    <td>
+
+                        <input type="text" id="txtZipcode" name="zipcode" required placeholder="Enter a 5 figit code"
+                        autocomplete="off"
+                        pattern="^\d(5)$"
+                      
+                        class="form-control"
+                        oninvalid="this.setCustomValidity('enter a 5 figit code')"
+                        oninput="setCustomValidity()">
+                        
+                     
+                    </td>
+                   
+
+
+
+                </tr>
+
+                    <!--zipcode -->
+
+                    <tr>
+                        <td>
+                            country<span class="required">*</span>
+                        </td>
+
+                        <td>
+                            <select id = "selCountry" name="country" 
+                            required class="form-control">
+                            <option value="" selected>please select</option>
+                            <option value="inddia" selected>inddia</option>
+
+
+
+
+                        </td>
+
+                       
+
+
+                        </select>
+
+
+
+
+
+                    </tr>
+
+
+
+
+                    
+                    <!--gender-->
+
+                    <tr>
+                        <td>
+                            gender<span class="required">*</span>
+                        </td>
+
+
+                        <td>
+                            <div class="form-check">
+                                <input class="form-check forrm-check-inline" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check forrm-check-inline" for="flexRadioDefault1">
+                                  Male
+                                </label>
+                              </div>
+
+                            <div class="form-check">
+                                <input class="form-check forrm-check-inline" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                                <label class="form-check forrm-check-inline" for="flexRadioDefault2">
+                                  Female
+                                </label>
+                              </div>
+
+
+                        </td>
+                          
+
+
+                      
+
+
+
+
+
+                    </tr>
+
+
+                         <!--Preferneces-->
+
+                        <tr>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check forrm-check-inline" type="checkbox" value="red" id="flexCheckDefault">
+                                    <label class="form-check-label lb-lg" >
+                                      Red
+                                    </label>
+                                  </div>
+
+
+
+                                <div class="form-check">
+                                    <input class="form-check forrm-check-inline" type="checkbox" value="green" id="flexCheckChecked" checked>
+                                    <label class="form-check-label lb-lg" >
+                                      Green
+                                    </label>
+                                  </div>
+
+                                
+                            
+                                <div class="form-check">
+                                    <input class="form-check forrm-check-inline" type="checkbox" value="blue" id="flexCheckChecked" checked>
+                                    <label class="form-check-label lb-lg" >
+                                      Blue
+                                    </label>
+                                  </div>
+
+
+                            </td>
+                             
+
+
+
+                        </tr>
+
+                          <!--PHONE-->
+
+                            <tr>
+                                <td> <label for ="txtPhone"> phone <span class="required">*</span> </label>
+
+
+                                </td>
+
+                                <td>
+                                    <input type="tel" class="form-control" id="txtPhone"
+                                    name="phone"
+                                    required
+                                    placeholder="enter phone number"
+                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+
+                                </td> 
+
+
+                            </tr>
+                            <!--email-->
+
+                            <tr>
+                                <td><label for = "txtEmail"> Email<span class = "required"></span></label>
+                                   
+
+
+                                </td>
+                                <td>
+                                    <input type="email" class="form-control" id="txtEmail"
+                                    name="email" required
+                                    placeholder="Enter Email adress">
+
+
+
+                                </td>
+
+
+
+                            </tr>
+
+                            <!--password-->
+
+                            <tr>
+                                <td><label for = "txtPassword"> Password<span class = "required"></span></label>
+                                   
+
+
+                                </td>
+                                <td>
+                                    <input type="password" class="form-control" id="txtEmail"
+                                    name="email" required
+                                    placeholder="Enter 6-8 char">
+
+
+
+                                </td>
+
+
+
+                            </tr>
+
+                            
+                        </tr>
+
+                        <!--verify password-->
+
+                        <tr>
+                            <td><label for = "txtPassword"> Password<span class = "required"></span></label>
+                               
+
+
+                            </td>
+                            <td>
+                                <input type="password" class="form-control" id="txtEmail"
+                                name="email" required
+                                placeholder="Enter 6-8 char">
+
+
+
+                            </td>
+
+
+
+                        </tr>
+
+                        <!--Date of birth-->
+
+                        <tr>
+                            <td><label for = "dateBirthday"> Date of birth<span class = "required"></span></label>
+                               
+
+
+                            </td>
+                            <td>
+                                <input type="date" class="form-control" id="dateBirthday"
+                                name="email" required
+                                placeholder="Enter 6-8 char">
+
+
+
+                            </td>
+
+
+
+                        </tr>
+
+                        <!------send and clear-->
+
+                        <tr>
+
+                            <td>
+                                &nbsp;
+                            </td>
+
+                            <td>
+                                <input type = "submit" value="SEND"
+                                id="btnReset" 
+                                class= "btn btn-primary btn-lg"
+                                />
+
+                                <input type = "submit" value="clear"
+                                id="btnSubmit"
+                                class="btn btn-secondary btn-lg"
+                                type ="reset" value="CLEAR"/>
+
+
+                            </td>
+
+
+
+
+
+
+                        </tr>
+
+
+
+            </table>
+        
+        </form>    
+    
+    </div>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ShopCart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        #img {
+
+            max-width: 100%;
+            height: 300px;
+            ;
+
+        }
+        #imgcard{
+            max-width: 100%;
+            height: 300px;
+            ;
+
+
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!----------------------------------------------navbar ---------------------------------------->
+
+    <nav class="navbar navbar-dark bg-primary">
+        <!-- Navbar content -->
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <div style="color:blue" class="container-fluid">
+                <a class="navbar-brand" href="#">ShopKart</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">AboutUs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="loginshop.html">Sign in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="reg.html">Sign Up</a>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                More
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+
+                                <form class="d-flex">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                        aria-label="Search"">
+                <button class=" btn btn-outline-success" type="submit"
+                                        style="color: white; border-color: white;">Search</button>
+                                </form>
+                </div>
+            </div>
+
+            <div style="text-align: right;">
+                <nav class="navbar navbar-light bg-primary">
+                    <div class="container-fluid">
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit"
+                                style="color: white; border-color: white" ;>Search</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+
+        </nav>
+    </nav>
+
+    <!---carousel-->
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="color: thistle;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" id="img">
+                <img src="applelandsacpe.jpg" class="d-block w-100" alt="..." style="size: auto;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Apple</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" id="img">
+                <img src="greenapple.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Green Apple</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" id="img">
+                <img src="CAROUSEL2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+    <table>
+        <!----------------IST ROW BEEGINS HERE----------------------------------------->
+        <tr>
+
+            <td>
+
+
+                <!---cards-->
+                <div class="card">
+                    <img src="fruits.jpg" class="card-img-top" id="imgcard" alt="...">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="productdetails.html" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+            <td>
+
+
+                <!---cards-->
+                <div class="card">
+                    <img src="fruits.jpg" class="card-img-top" id="imgcard" alt="...">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="productdetails.html" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+
+            <td>
+
+
+                <!---cards-->
+                <div class="card">
+                    <img src="apple.jpg" class="card-img-top" id="imgcard" alt="..."  >
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+
+
+            <td>
+                <!---cards-->
+                <div class="card">
+                    <img src="orange.jpg" class="card-img-top" id="imgcard" alt="...">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+            <td>
+
+
+                <!---cards-->
+                <div class="card">
+                    <img src="fruits.jpg" class="card-img-top" id="imgcard" alt="...">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+
+
+
+
+        </tr>
+
+<!----------------2N ROW BEEGINS HERE----------------------------------------->
+        <tr>
+
+            <td>
+
+
+                <!---cards-->
+                <div class="card">
+                    <img src="fruits.jpg" class="card-img-top" id="imgcard" alt="...">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+            <td>
+
+
+                <!---cards-->
+                <div class="card">
+                    <img src="fruits.jpg" class="card-img-top" id="imgcard" alt="...">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+            <td>
+
+
+                <!---cards-->
+                <div class="card">
+                    <img src="fruits.jpg" class="card-img-top" id="imgcard" alt="...">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+
+
+            <td>
+
+
+                <!---cards-->
+                <div class="card">
+                    <img src="apple.jpg" class="card-img-top" id="imgcard" alt="..."  >
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+
+
+            <td>
+                <!---cards-->
+                <div class="card">
+                    <img src="orange.jpg" class="card-img-top" id="imgcard" alt="...">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+        </tr>
+<!----------------3RD ROW BEEGINS HERE----------------------------------------->
+        <tr>
+
+            <td>
+
+
+                <!---cards-->
+                <div class="card">
+                    <img src="fruits.jpg" class="card-img-top" id="imgcard" alt="...">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+                <td>
+
+
+                    <!---cards-->
+                    <div class="card">
+                        <img src="fruits.jpg" class="card-img-top" id="imgcard" alt="...">
+    
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Buy Now</a>
+                        </div>
+                    </div>
+    
+                    
+
+            </td>
+
+
+            <td>
+
+
+                <!---cards-->
+                <div class="card">
+                    <img src="apple.jpg" class="card-img-top" id="imgcard" alt="..."  >
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+
+
+            <td>
+                <!---cards-->
+                <div class="card">
+                    <img src="orange.jpg" class="card-img-top" id="imgcard" alt="...">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+            
+            <td>
+                <!---cards-->
+                <div class="card">
+                    <img src="orange.jpg" class="card-img-top" id="imgcard" alt="...">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+        </tr>
+        <!----------------4TH ROW BEEGINS HERE----------------------------------------->
+        <tr>
+
+            <td>
+
+
+                <!---cards-->
+                <div class="card">
+                    <img src="fruits.jpg" class="card-img-top" id="imgcard" alt="...">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+
+
+            <td>
+
+
+                <!---cards-->
+                <div class="card">
+                    <img src="apple.jpg" class="card-img-top" id="imgcard" alt="..."  >
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+
+
+            <td>
+                <!---cards-->
+                <div class="card">
+                    <img src="orange.jpg" class="card-img-top" id="imgcard" alt="...">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+            
+            <td>
+                <!---cards-->
+                <div class="card">
+                    <img src="orange.jpg" class="card-img-top" id="imgcard" alt="...">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+            
+            <td>
+                <!---cards-->
+                <div class="card">
+                    <img src="orange.jpg" class="card-img-top" id="imgcard" alt="...">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+
+
+
+            </td>
+        </tr>
+
+
+    </table>
+
+    
+    <footer class="container py-5">
+        <div class="row">
+            <div class="col-12 col-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
+                    viewBox="0 0 24 24">
+                    <title>Product</title>
+                    <circle cx="12" cy="12" r="10" />
+                    <path
+                        d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+                </svg>
+                <small class="d-block mb-3 text-muted">&copy; 2017–2021</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Cool stuff</a></li>
+                    <li><a class="link-secondary" href="#">Random feature</a></li>
+                    <li><a class="link-secondary" href="#">Team feature</a></li>
+                    <li><a class="link-secondary" href="#">Stuff for developers</a></li>
+                    <li><a class="link-secondary" href="#">Another one</a></li>
+                    <li><a class="link-secondary" href="#">Last time</a></li>
+                </ul>
+            </div>
+          
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Team</a></li>
+                    <li><a class="link-secondary" href="#">Locations</a></li>
+                    <li><a class="link-secondary" href="#">Privacy</a></li>
+                    <li><a class="link-secondary" href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>

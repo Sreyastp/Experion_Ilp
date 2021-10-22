@@ -1,0 +1,40 @@
+<html>
+        <head>
+            <title>Animation</title>
+            <style type="text/css">
+              div{width: 100px;
+                height: 100px;
+                background: green;
+                transition: width 5s;
+                -webkit-animation: myfirst 5s; /* for ie*/
+                animation: myfirst 5s;
+                -webkit-transition: width 5s;
+              }
+              div:hover{
+                        width: 300px;
+
+              }
+
+              @-webkit-keyframes myfirst{
+                  from{background: cyan;}
+                  to{background: green;}   /* for ie*/
+              }
+
+              @keyframes myfirst{
+                  from{background: cyan;}
+                  to{background: green;}   /* for normal browsers*/
+              }
+
+            </style>
+        </head> 
+        <body>
+            <h1>Appply Animation</h1>
+            <p>This is a paragraph without Animation</p>
+            <div>
+                <p >This is a paragraph with Animation</p>
+            </div>
+            
+            
+        
+        </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+
+    <script>
+
+        var myVar=900; //global Variable
+
+        function funOne(){
+            var x=100;
+            document.writeln('from function1:'+"<br>" + x);
+            document.writeln("<br>")
+            document.writeln('from function1:' + myVar);
+        }
+
+
+        function funTwo(){
+            var y=100;
+            document.writeln('from function2:' + y);
+            document.writeln("<br>")
+            document.writeln('from function2:' + myVar);
+
+        }
+    </script>
+
+</head>
+<body background-color="grey">
+   
+
+    <form name="frmOne">
+        Calling Function one:
+        <input type="button" value="Function One" onclick="funOne()"><br>
+        Calling Function two:
+        <input type="button" value="Function two" onclick="funTwo()">
+        
+    </form>
+</body>
+</html>

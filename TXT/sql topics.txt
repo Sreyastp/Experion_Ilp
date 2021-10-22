@@ -1,0 +1,11 @@
+aggregate function
+constraint
+group by
+order by
+view 
+join
+SUB QUERY
+SET OPERATOR
+EXCEPT
+INDEXES
+

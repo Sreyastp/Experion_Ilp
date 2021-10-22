@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+    <!--javascript begins here-->
+    <script type="text/javascript">
+
+
+        function getData(){
+
+
+            //saving the name entered in a local variable
+        var name = document.getElementById("vname").value;
+        var pass = document.getElementById("vpass").value;
+
+
+             //save it in local storage
+        localStorage.setItem("vname" , name);
+        localStorage.setItem("vpass" , pass);
+
+        }
+     </script>
+     <!--javascript ends here-->
+
+
+   
+    <title>learn local storage</title>
+</head>
+<body>
+
+    
+        
+    <div class="container-fluid">
+        <div>
+            <h1>Local storage learn</h1>         
+                <div>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="name">Name:<span>*</span></label>
+                            </td>
+                            <td>
+                                <input class="vname" name="name" type="text" placeholder="Enter the name" required autocomplete="off" >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="vpass">Password:<span>*</span></label>
+                            </td>
+                            <td>
+                                <input class="vpass" name="pass" type="password" placeholder="Enter the Password" required autocomplete="off" >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                <input class="btn btn-primary" name="vbtn" type="submit" onclick="getData()" >
+                            </td>
+                        </tr>
+                        
+                    </table>    
+                </div>
+        </div>
+    </div>
+   
+
+
+
+</body>
+</html>

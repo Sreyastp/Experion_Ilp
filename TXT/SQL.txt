@@ -1,0 +1,24 @@
+-------------SELECT---------------
+1.SELECT EMP_NAME, ANNUAL_INCOME*0.3 AS ANNUAL_TAX FROM EMPLOYEE
+2.SELECT * FROM EMPLOYEE ORDER BY EMP_NAME ASC;
+3.SELECT * FROM EMPLOYEE ORDER BY INCOME DESC;
+4.SELECT * FROM EMPLOYEE WHERE EMP_NAME LIKE 'A%E%T';
+5.SELECT * FROM EMPLOYEE WHERE JOIN_DATE > '01-JAN-98' AND SALARY > 25000;
+6.SELECT * FROM EMPLOYEE WHERE COMISSION IS NULL;
+7.SELECT NAME + 'COSTS 52.00 AFTER DISCOUNT' AS PRODUCTS;
+
+---------------------JOIN---------------------
+
+a. SELECT E.employee_name FROM employee E JOIN Department D ON(E.employee_ID = D.employee_ID);
+
+b. SELECT CONCAT('Every Year',E.employee_name, ' of ' ,D.department_name, ' earns amount ' ,E.annual_income) FROM employee E JOIN department D ON(E.employee_ID = D.employeeID);
+
+c. SELECT  E.employee_name , D.department_name FROM employee E JOIN department D ON (E.employee_ID = D.employee_ID) where E.employee_name ORDER BY DESC AND ORDER BY   D.employee_name ;  
+
+e. SELECT E.employee_name + ' ' + D.department_name FROM employee E JOIN department D ON (E.employee_ID = D.employee_ID)
+
+f .SELECT  E.EMP_NAME,E.JOB,D.DEPT_NO,D.DEPT_NAME FROM EMPLOYEE E INNER JOINS DEPARTMENT D ON E.DEPT_ID= D.DEPT_ID WHERE E.CITY= "DALLAS";
+
+g. 14.SELECT E.EMP_NAME,M.MANAGER_NAME FROM EMPLOYEE E INNER JOINS MANAGER M ON E.MANAGER_ID = M.MANAGER_ID;
+
+i.SELECT E.EMP_NAME,D.DEPT_NO FROM EMPLOYEE E INNER JOIN DEPTPARTMENT D ON E.DEPT_ID = D.DEPT_ID WHERE (SELECT D.DEPT_ID FROM DEPERATMENT D WHERE D.DEPT_NAME='MATHEWS');

@@ -1,0 +1,91 @@
+
+
+
+.subjects-group {
+  background: rgb(223, 223, 223);
+  min-height: 50em;
+  padding-top: 5em;
+  padding-bottom: 5em; }
+
+.introduction,
+.subjects-group {
+  padding-top: 2em;
+  padding-bottom: 4em; }
+
+.introduction {
+  padding-left: 3em;
+  padding-right: 3em; }
+
+.subjectBlock {
+  background: #00d9ff;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding-top: 3em;
+  margin-top: 2em; }
+
+.global-footer {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background: #ccc; }
+
+.global-signoff {
+  padding-top: 1em; }
+
+
+.btn-selectcourse {
+  border-radius: 0 0 6px 6px; }
+
+
+
+.subject-english button {
+  background: color-english; }
+
+.subject-english h2 {
+  color: color-english; }
+
+.subject-maths button {
+  background: color-maths; }
+
+.subject-maths h2 {
+  color: color-maths; }
+
+.subject-ancienthistory button {
+  background: color-ancient; }
+
+.subject-ancienthistory h2 {
+  color: color-ancient; }
+
+.subject-religion button {
+  background: color-religion; }
+
+.subject-religion h2 {
+  color: color-religion; }
+
+.subject-chemistry button {
+  background: color-chemistry; }
+
+.subject-chemistry h2 {
+  color: color-chemistry; }
+
+.subject-biology button {
+  background: color-biology; }
+
+.subject-biology h2 {
+  color: color-biology; }
+
+.subjects-group button {
+  color: #fff; }
+  .subjects-group button .subjectBlock a:hover {
+    color: black; }
+
+@media screen and (max-width: 800px) {
+  .global-footer,
+  .global-signoff p {
+    text-align: center; }
+
+  nav {
+    text-align: center; }
+
+  .global-login {
+    border-top: 1px solid #ddd;
+    /*background: #333;*/ } }
