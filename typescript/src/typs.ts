@@ -288,7 +288,7 @@ function optionalfn1(f: number,g?: number){
         return f+g+5;
     }
     else{
-        return f+g;
+       
     }
 
 
