@@ -1,8 +1,10 @@
-//part 1 cremaining variables
+"use strict";
+//part 1 cremaining variables/*
+/*
 let kmtomars: number = 225000000;
 let kmtomoon: number = 384400;
 
-//part2 
+//part2
 
 
 
@@ -11,7 +13,7 @@ let kmtomoon: number = 384400;
 let miles
 let speedMph
 
-//part3 
+//part3
 class spacecraft{
     mperkm: number = 0.621;
     name?: string;
@@ -51,3 +53,6 @@ class spaceloction{
 
 
 }
+
+
+*/ 
