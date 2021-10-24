@@ -75,7 +75,6 @@ class Suv extends Car {
 
   
     //interface
-
     interface IApache{
         //3 properties and 2 methods
         Speed: number;
@@ -88,6 +87,7 @@ class Suv extends Car {
 
     }
 
+    //interfaces with objects
     let rtr : IApache = {
         Speed: 130,
         accln: "faster than light",
@@ -100,6 +100,7 @@ class Suv extends Car {
         }
     }
 
+    //interface with objects
     let rr: IApache ={
         Speed: 0,
         accln: "lightnig fast",
@@ -114,7 +115,66 @@ class Suv extends Car {
         }
     }
    
-    class implements IApache{
+    //interfaces wit class
+    class rtrcls implements IApache{
+        name:string;
+        Speed: number;
+        accln: string;
+        mileage: number;
+        race(track: string): string {
+           return "just nothing"
+        }
+        burntime(): number {
+            return 3780
+        }
+
+
+       
+
+    //constructor for interface class
+    constructor(name:string, Speed:number,accln:string,mileage:number){
+        this.name=name;
+        this.Speed=Speed;
+        this.accln=accln;
+        this.mileage=mileage;      
+    }
         
+    }
+
+
+
+
+
+
+    //call backs
+   //synchrous
+    function addNumber(numOne: number,
+        numTwo: number,
+        printCb: (l:string, v:any) => void){
+    //console.log(numOne+numTwo);
+    printCb("result is", numOne+numTwo);
+    }
+
+
+    function prettyPrint(label: string, val: any){
+    //output: result is :300
+    console.log('-----------');
+    console.log(`${label} : ${val}`);
+    console.log('-----------');
+
 
     }
+
+    addNumber(100,200,prettyPrint);
+
+
+    //Asynchronous 
+    console.log("before");
+    setTimeout(()=>
+    console.log('Welcome Guys'),2000
+    //async //url-- REST API
+    //response - accept /reject -- promise
+    //await
+
+    );
+    console.log("After");

@@ -113,6 +113,8 @@ else {
     */
 //const ADMIN = 0;
 //const READ_ONLY = 1;
+
+
 //ENUM
 var Role;
 (function (Role) {
@@ -133,6 +135,9 @@ console.log(employee.name);
 console.log(employee.age);
 var movies;
 movies = ['gun', 'val', 'man'];
+
+
+
 //for
 for (var _i = 0, _a = employee.hobbies; _i < _a.length; _i++) {
     var hobby = _a[_i];

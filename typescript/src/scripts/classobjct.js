@@ -61,6 +61,7 @@ var Osuv = new Suv(400000, 255, "Mperformance", "X-drive", true, 8);
 //calling the functions of the parent class car 
 console.log(Osuv.dispCar);
 console.log(Osuv.dispSuv);
+//interfaces with objects
 var rtr = {
     Speed: 130,
     accln: "faster than light",
@@ -72,6 +73,7 @@ var rtr = {
         return 100;
     }
 };
+//interface with objects
 var rr = {
     Speed: 0,
     accln: "lightnig fast",
@@ -83,8 +85,43 @@ var rr = {
         return 1200;
     }
 };
-var default_1 = /** @class */ (function () {
-    function default_1() {
+//interfaces wit class
+var rtrcls = /** @class */ (function () {
+    //constructor for interface class
+    function rtrcls(name, Speed, accln, mileage) {
+        this.name = name;
+        this.Speed = Speed;
+        this.accln = accln;
+        this.mileage = mileage;
     }
-    return default_1;
+    rtrcls.prototype.race = function (track) {
+        return "just nothing";
+    };
+    rtrcls.prototype.burntime = function () {
+        return 3780;
+    };
+    return rtrcls;
 }());
+//call backs
+//synchrous
+function addNumber(numOne, numTwo, printCb) {
+    //console.log(numOne+numTwo);
+    printCb("result is", numOne + numTwo);
+}
+function prettyPrint(label, val) {
+    //output: result is :300
+    console.log('-----------');
+    console.log(label + " : " + val);
+    console.log('-----------');
+}
+addNumber(100, 200, prettyPrint);
+//Asynchronous 
+console.log("before");
+setTimeout(function () {
+    return console.log('Welcome Guys');
+}, 2000
+//async //url-- REST API
+//response - accept /reject -- promise
+//await
+);
+console.log("After");

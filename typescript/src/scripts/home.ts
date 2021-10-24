@@ -8,7 +8,8 @@ let kmtomoon: number = 384400;
 
 
 
-
+let miles
+let speedMph
 
 //part3 
 class spacecraft{
@@ -24,7 +25,7 @@ class spacecraft{
 
 
 //methods
-getDaysToLocation(kilometersaway: number) : number{
+getDaysToLocation(kilometersaway: number) : void{
     let milesAway: number = kilometersaway* this.mperkm;
     let hours: number = miles / speedMph;
 }
@@ -47,6 +48,6 @@ class spaceloction{
     constructor(name:string, kilometersaway:number){
 
     }
-```````````~~```
+
 
 }
