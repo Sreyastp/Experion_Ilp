@@ -114,4 +114,7 @@ class Suv extends Car {
         }
     }
    
-    
+    class implements IApache{
+        
+
+    }
