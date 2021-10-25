@@ -1,7 +1,7 @@
 "use strict";
-var employee = /** @class */ (function () {
+class employee {
     //constructor
-    function employee(name, adhrno, adrs, depno, orderdtls) {
+    constructor(name, adhrno, adrs, depno, orderdtls) {
         this.empName = name;
         this.aadharNo = adhrno;
         this.address = adrs;
@@ -9,25 +9,24 @@ var employee = /** @class */ (function () {
         this.orderdetails = orderdtls;
     }
     //fns
-    employee.prototype.getEmpName = function () {
+    getEmpName() {
         return this.empName;
-    };
-    employee.prototype.getAdhNo = function () {
+    }
+    getAdhNo() {
         return this.aadharNo;
-    };
-    employee.prototype.getAddress = function () {
+    }
+    getAddress() {
         return this.address;
-    };
-    employee.prototype.getDeptNO = function () {
+    }
+    getDeptNO() {
         return this.aadharNo;
-    };
-    employee.prototype.getordrdtls = function () {
+    }
+    getordrdtls() {
         return this.orderdetails;
-    };
-    return employee;
-}());
+    }
+}
 //employee object
-var objectemployee = new employee('Ramesh', 100, 'palakkad', 1234, 'ordered a mobile');
+let objectemployee = new employee('Ramesh', 100, 'palakkad', 1234, 'ordered a mobile');
 console.log(objectemployee);
 console.log(objectemployee.getEmpName());
 console.log(objectemployee.getAdhNo());
@@ -35,8 +34,8 @@ console.log(objectemployee.getDeptNO());
 console.log(objectemployee.getAddress());
 console.log(objectemployee.getordrdtls());
 //display output
-var empdetails = 0;
-var orderdetails = 1;
+let empdetails = 0;
+let orderdetails = 1;
 /// condition for output
 if (empdetails == 1) {
     console.log(objectemployee.getEmpName());

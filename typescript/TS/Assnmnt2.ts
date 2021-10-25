@@ -1,3 +1,4 @@
+
 /*
 //make changes in ts config.json
 // - "target": "es5"
@@ -62,45 +63,45 @@ runAsyncFunctions()
 // -"module": "es2015"
 
 //step 1 - details of the employee
-interface Employee{
+interface User{
+    userId :number
     id:number
-    email:string
-    first_name:string
-    last_name:string
-    avatar:string
+    title:string
+    body:string
+
 }
 
 
 //step 2 - decalre webapi - endpoints
-const baseApi='https://reqres.in/api/users?page=1'
-const userApi ='https://reqres.in/api/user'
+const baseApi1='https://jsonplaceholder.typicode.com/posts'
+const userApi1 ='https://jsonplaceholder.typicode.com/comments'
 
 // step 3 - fetch all employee
-const fetchAllEmployees = async (url:string): Promise<Employee[]> => {
+const fetchAllEmployees1 = async (url:string): Promise<User[]> => {
     const response = await fetch(url)
-    const { data }= await response.json()    
+    const  data= await response.json()    
     return data
 }
 
 //step 4 -Fetch an employee
-const fetchEmployee =
-async(url : string , id : number):Promise<Record<string,string>> => {
+const fetchEmployee1 =
+async(url : string ,id : number):Promise<Record<string,string>> => {
     const response = await fetch(`${url}/${id}`)
-    const { data }= await response.json()    
+    const data = await response.json()    
     return data
 }
 
 // step 5 - GenerateEmail
 
 // step 6 - run async -promise- await functions
-const runAyncFunctions = async() =>{
+const runAyncFunctions1 = async() =>{
 
    //exception handling
    try{
-        const employees = await fetchAllEmployees(baseApi)
+        const employees = await fetchAllEmployees1(baseApi1)
         Promise.all(
             employees.map(async user => {
-                const userName = await fetchEmployee(userApi,user.id)
+                const userName = await fetchEmployee1(userApi1,user.id)
                 console.log(userName)
                 return userName
             })
@@ -112,4 +113,4 @@ const runAyncFunctions = async() =>{
    }
 }
 
-runAyncFunctions()
+runAyncFunctions1()

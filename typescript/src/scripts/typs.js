@@ -1,19 +1,4 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 /*console.log("Hello");
 
 //declare varialbles
@@ -41,30 +26,30 @@ console.log(result)
 const result */
 //mars
 function marsdistance(speedkmph, distancekm) {
-    var timeToMarshrs = distancekm / speedkmph;
-    var timetomarsdays = timeToMarshrs / 24;
+    const timeToMarshrs = distancekm / speedkmph;
+    const timetomarsdays = timeToMarshrs / 24;
     return timetomarsdays;
 }
 function moondistance(speedkmph, disttomoonkm) {
-    var timeTomoonhrs = disttomoonkm / speedkmph;
-    var timetomoonsdays = timeTomoonhrs / 24;
+    const timeTomoonhrs = disttomoonkm / speedkmph;
+    const timetomoonsdays = timeTomoonhrs / 24;
     return timetomoonsdays;
 }
 //mars
-var shuttleName = 'Determination';
-var distancekm = 225000000;
-var speedmph = 17500;
-var speedkmph = speedmph * 1.6;
+const shuttleName = 'Determination';
+const distancekm = 225000000;
+const speedmph = 17500;
+const speedkmph = speedmph * 1.6;
 //moon
-var disttomoonkm = 38400;
+const disttomoonkm = 38400;
 console.log(marsdistance(speedkmph, distancekm));
 console.log(moondistance(speedkmph, disttomoonkm));
-var engineIndicatorLight = "red blinking";
-var spaceSuitsOn = "true";
-var shuttleCabinReady = "true";
-var crewStatus = spaceSuitsOn && shuttleCabinReady;
-var computerStatusCode = 200;
-var shuttleSpeed = 15000;
+let engineIndicatorLight = "red blinking";
+let spaceSuitsOn = "true";
+let shuttleCabinReady = "true";
+let crewStatus = spaceSuitsOn && shuttleCabinReady;
+let computerStatusCode = 200;
+let shuttleSpeed = 15000;
 if (engineIndicatorLight === "green") {
     console.log("engine ON");
 }
@@ -80,7 +65,7 @@ if (crewStatus) {
 else {
     console.log("crew not ready");
 }
-var value = 200;
+let value = 200;
 if (value === 200) {
     console.log("Please stand by . computer is rebooting");
 }
@@ -90,7 +75,7 @@ else if (value === 400) {
 else {
     console.log("Alert: computer offline");
 }
-var value1 = 20000;
+let value1 = 20000;
 if (value1 > 17500) {
     console.log("Alert: Escape velocity reached");
 }
@@ -239,16 +224,16 @@ function myFunctions(x) {
     return x * 5;
 }
 console.log(myFunctions(5));
-var y = 10;
+let y = 10;
 // declaration (y: number) : return type
 function myFunctions1(y) {
-    var z = y * 66;
+    let z = y * 66;
     console.log(z);
     return;
 }
 console.log(myFunctions1(5));
 //Anonymouss Functions---------unknown
-var myFunction2 = function (a) {
+let myFunction2 = function (a) {
     return a * 100;
 };
 console.log(myFunction2);
@@ -268,43 +253,31 @@ function optionalfn1(f, g) {
 }
 console.log(optionalfn(5, 10));
 //classssss
-var vehicles = /** @class */ (function () {
+class vehicles {
     //constructor
-    function vehicles(twostroke) {
+    constructor(twostroke) {
         this.engineconfig = "twostroke";
         this.name = "v8";
     }
     //methods
-    vehicles.prototype.hitthegas = function () {
+    hitthegas() {
         return "ready to race ";
-    };
-    return vehicles;
-}());
+    }
+}
 //object creation-----instantiation 
-var s = new vehicles("Rtr");
+let s = new vehicles("Rtr");
 console.log(s);
 console.log(s.engineconfig);
 console.log();
 //inheritance -------
-var sedan = /** @class */ (function (_super) {
-    __extends(sedan, _super);
-    function sedan() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return sedan;
-}(vehicles));
+class sedan extends vehicles {
+}
 /////hatch
-var hatch = /** @class */ (function (_super) {
-    __extends(hatch, _super);
-    function hatch() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return hatch;
-}(vehicles));
-var className = /** @class */ (function () {
+class hatch extends vehicles {
+}
+class className {
     //propetries
-    function className(x) {
+    constructor(x) {
         this.someProperty = x;
     }
-    return className;
-}());
+}
