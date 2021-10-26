@@ -1,4 +1,5 @@
 "use strict";
+//interfaces
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -16,18 +17,16 @@ const fetchPosts = (url) => __awaiter(void 0, void 0, void 0, function* () {
     const data = yield response.json();
     return data;
 });
-const fetchComment = (url, id) => __awaiter(void 0, void 0, void 0, function* () {
-    // console.log("Fetching Comments from : " + `${url}/${id}`)
+const fetchComments = (url, id) => __awaiter(void 0, void 0, void 0, function* () {
     const response = yield fetch(`${url}/${id}`);
     const data = yield response.json();
-    // console.log("Comments Data: " + data)
     return data;
 });
-const runAsyncFunctions_ = () => __awaiter(void 0, void 0, void 0, function* () {
+const runAsyncFunctionss = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const posts = yield fetchPosts(base_Api);
         Promise.all(posts.map((comment) => __awaiter(void 0, void 0, void 0, function* () {
-            const commentName = yield fetchComment(user_Api, comment.id);
+            const commentName = yield fetchComments(user_Api, comment.id);
             console.log(commentName);
             return commentName;
         })));
@@ -36,4 +35,4 @@ const runAsyncFunctions_ = () => __awaiter(void 0, void 0, void 0, function* () 
         console.log(error);
     }
 });
-runAsyncFunctions_();
+runAsyncFunctionss();

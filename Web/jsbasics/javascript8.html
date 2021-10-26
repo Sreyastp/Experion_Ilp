@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form Validation</title>
+    <script type="text/javascript">
+
+      //Array declaration for divs
+      var divs = new Array();
+      divs[0] = "errFirst";
+      divs[1] = "errLast";
+      divs[2] = "errEmail";
+      divs[3] = "errUid";
+      divs[4] = "errPassword";
+      divs[5] = "errConfirm";
+       //Write validate functions
+       function validate(){
+         //Inputs array to maintain
+         var inputs = new Array();
+         inputs[0] = document.getElementById("first").value;
+         inputs[1] = document.getElementById("last").value;
+         inputs[2] = document.getElementById("email").value;
+         inputs[3] = document.getElementById("uid").value;
+         inputs[4] = document.getElementById("password").value;
+         inputs[5] = document.getElementById("confirm").value;
+
+         //Display error message - in red color -- span
+         var errors = new Array();
+         errors[0] = "<span style='color:red'>Please enter first name</span>";
+         errors[1] = "<span style='color:red'>Please enter last name</span>";
+         errors[2] = "<span style='color:red'>Please enter email</span>";
+         errors[3] = "<span style='color:red'>Please enter user id</span>";
+         errors[4] = "<span style='color:red'>Please enter password</span>";
+         errors[5] = "<span style='color:red'>Please enter confirm your password</span>";
+
+         //Iterate through all elements
+         for(var i in inputs){
+
+            //declare variables for errMessage
+            var errMessage = errors[i];
+            var div = divs[i];
+
+            //Validation
+            if(inputs[i]==""){ //firstName, lastName, uid
+              document.getElementById(div).innerHTML = errMessage;
+            }
+
+            //email
+            else if(i == 2){
+
+              //@--
+              var atpos = inputs[i].indexOf("@");
+              var dotpos = inputs[i].lastIndexOf(".");
+
+              if(atpos < 1 || dotpos < atpos + 2 || dotpos+2 >= inputs[i].length){
+                document.getElementById("errEmail").innerHTML = errMessage;
+              }
+              else
+              {
+                  document.getElementById("errEmail").innerHTML = "OK";
+              }
+
+            }
+            else if(i == 5){
+              var firstPwd = document.getElementById("password").value;
+              var secondPwd = document.getElementById("password").value;
+
+              //Verify password
+              if(secondPwd != firstPwd){
+                document.getElementById("errorConfirm").innerHTML = "<span style='color:red'>Passwords do not match</span>"
+              }
+
+              else{
+                document.getElementById(div).innerHTML = "OK";
+              }
+            }
+            else{
+              document.getElementById(div).innerHTML = "OK";
+            }
+         }
+
+       }
+
+
+
+
+
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>First Name: </td>
+        <td><input type="text" id="first" name="" value="" onkeyup="validate();"></td>
+        <td><div id="errFirst">
+
+        </div></td>
+      </tr>
+
+      <tr>
+        <td>Last Name: </td>
+        <td><input type="text" id="lastt" name="" value="" onkeyup="validate();"></td>
+        <td><div id="errLast">
+
+        </div></td>
+      </tr>
+
+      <tr>
+        <td>Email: </td>
+        <td><input type="text" id="email" name="" value="" onkeyup="validate();"></td>
+        <td><div id="errEmail">
+
+        </div></td>
+      </tr>
+
+      <tr>
+        <td>User ID: </td>
+        <td><input type="text" id="uid" name="" value="" onkeyup="validate();"></td>
+        <td><div id="errUid">
+
+        </div></td>
+      </tr>
+
+      <tr>
+        <td>Password: </td>
+        <td><input type="passowrd" id="password" name="" value="" onkeyup="validate();"></td>
+        <td><div id="errPassword">
+
+        </div></td>
+</tr>
+        <tr>
+          <td>Confirm Password: </td>
+          <td><input type="password" id="confirm" name="" value="" onkeyup="validate();"></td>
+          <td><div id="errConfirm">
+
+          </div></td>
+
+      </tr>
+
+      <tr>
+        <td><input type="button" id="create" name="" value="Create" onClick="validate();"></td>
+        <td><div id="errFinal">
+
+        </div></td>
+      </tr>
+    </table>
+  </body>
+</html>

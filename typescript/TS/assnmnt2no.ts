@@ -1,18 +1,19 @@
 //interfaces
-interface Comments
-{
-    postID : number
-    id : number
-    name : string
-    email : string
-    body : string
-}
 
 interface Posts
 {
     UserID : number
     id : number
     title : string
+    body : string
+}
+
+interface Comments
+{
+    postID : number
+    id : number
+    name : string
+    email : string
     body : string
 }
 
@@ -29,7 +30,7 @@ const fetchPosts =
         return data
     }
 
-const fetchComment = 
+const fetchComments = 
     async(url : string, id : number) : Promise<Record< string, string >> => 
         {
             
@@ -40,7 +41,7 @@ const fetchComment =
         }
 
 
-const runAsyncFunctions_ = 
+const runAsyncFunctionss = 
 async() => 
 {
     try
@@ -52,7 +53,7 @@ async() =>
             ( 
                 async comment => 
                 {
-                    const commentName = await fetchComment(user_Api,comment.id)
+                    const commentName = await fetchComments(user_Api,comment.id)
                     console.log(commentName);
                     return commentName                    
                 }
@@ -66,4 +67,4 @@ async() =>
     }
 }
 
-runAsyncFunctions_()
+runAsyncFunctionss()
