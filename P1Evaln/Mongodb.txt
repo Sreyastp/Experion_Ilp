@@ -1,0 +1,105 @@
+use dating
+
+db.createCollection('datingclctn')
+
+db.datingclctn.insert([
+
+    {
+	client_id: 1,
+	client_name: "Krishnan",
+    client_age: 23,
+    client_occupation: "Business",
+	Hobbies: ["cricket", "Football","Music"],
+    Fav_food_type: ["Pizza", "Berger"],
+    Movie_Genre_Prefernces:{
+                            Preference1: "Horror",	
+                            Preference2: "action",
+                            Preference3: "Drama"
+                            },	
+    },
+    
+    {
+	client_id: 2,
+	client_name: "Tom",
+    client_age: 40,
+    client_occupation: "Farmer",
+	Hobbies: ["chess", "singing","Music"],
+    Fav_food_type: ["dosa", "meals"],
+    Movie_Genre_Prefernces:{
+                            Preference1: "Romance",	
+                            Preference2: "action",
+                            Preference3: "Drama"
+                            },
+    },
+    
+    {
+	client_id: 3,
+	client_name: "sam",
+    client_age: 33,
+    client_occupation: "driver",
+	Hobbies: ["basketball", "Football","Movie"],
+    Fav_food_type: ["sandwich", "Berger"],
+    Movie_Genre_Prefernces:{
+                            Preference1: "Thriller",	
+                            Preference2: "Romance",
+                            Preference3: "adventure"
+                            },
+    },
+    
+    {
+	client_id: 4,
+	client_name: "Sara",
+    client_age: 23,
+    client_occupation: "Business",
+	Hobbies: ["Running", "Football","Drawing"],
+    Fav_food_type: ["Pizza", "Vada"],
+    Movie_Genre_Prefernces:{
+                            Preference1: "Horror",	
+                            Preference2: "action",
+                            Preference3: "Drama"
+                            },
+    },
+    
+    {
+	client_id: 5,
+	client_name: "Krishnan",
+    client_age: 23,
+    client_occupation: "Musicician",
+	Hobbies: ["basketball", "Football","Dancing"],
+    Fav_food_type: ["puffs", "cutlet"],
+    Movie_Genre_Prefernces:{
+                            Preference1: "Comedy",	
+                            Preference2: "Romance",
+                            Preference3: "Thriller"
+                            },
+    },
+
+])
+
+
+
+
+5.db.datingclctn.find({},{_id:1}).limit(1).sort({$natural:-1}).pretty()
+
+
+
+
+db.datingclctn.find({"client_id": 5 , });
+
+
+
+
+
+
+ db.dbdatingclctn.find({},{"client_id" : 1,"client_name":0," ,"client_occupation" :0,"Hobbies":0,"Fav_food_type":0,"Movie_Genre_Prefernces":0});
+
+db.datingclctn.find({},{"client_id" : 1,"client_name":1});
+
+db.datingclctn.find({"client_id": 5 , });
+
+db.datingclctn.find({"client_id": 5 , "client_name":1});
+
+db.datingclctn.find().skip(4)pretty();
+
+
+https://teams.microsoft.com/l/meetup-join/19%3ALcaeEpB_bWKG5vW4utTebhgnTfw9FaBN6ULvwIWWR8Q1%40thread.tacv2/1635400547617?context=%7B%22Tid%22%3A%2213ec0e67-00c5-44c4-8bdb-52adb4a2feae%22%2C%22Oid%22%3A%22ed9474d2-12ac-4abe-a3c8-b5d93bf64c92%22%7D

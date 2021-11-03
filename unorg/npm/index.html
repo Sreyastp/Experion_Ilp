@@ -1,0 +1,60 @@
+//npm and typescript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NPM</title>
+</head>
+<body>
+    <h1 class="">NPM and typescript</h1>
+    <!-----------form begins here----------->
+    <form id="form1" asp-controller="Home" asp-action="Index2">
+        <label for="name">Name : </label>
+        <br />
+        <input id="name" name="name" type="text" 
+    minlength="3" maxlength="10" 
+    pattern="^[A-Za-z]+$" required />
+        <span id="msgName"></span>
+        <br />
+        <label for="age">Age : </label>
+        <br />
+        <input id="age" name="age" type="number" 
+    min="18" max="100" required />
+        <span id="msgAge"></span>
+        <br /><br />
+        <button id="submit" type="submit">Submit</button>
+    </form>
+    <br />
+    <ul id="errorList"></ul>
+
+    <script src="app.js"></script>
+
+    <script>
+                window.onload = function () {
+
+        let obj = new FormValidator();
+
+        obj.setValidationMessages("name", "msgName", {
+            valueMissing: "Name must be specified",
+            tooShort: "Name is too short",
+            tooLong: "Name is too long",
+            patternMismatch:"Only alphabets allowed"
+        });
+
+
+        obj.setValidationMessages("age", "msgAge", {
+            valueMissing: "Age must be specified",
+            rangeUnderflow: "Age must be minimum of 18 years",
+            rangeOverflow: " Age must be less than 100 years"
+        });
+        }
+        let submitBtn = document.querySelector("#submit");
+
+submitBtn.onclick = function () {
+    obj.showValidationSummary("form1", "errorList");
+}
+    </script>
+
+</body>
+
+
+</html>

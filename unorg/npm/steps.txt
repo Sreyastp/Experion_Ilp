@@ -1,0 +1,3 @@
+npm init //on a folder to create a package.json file
+
+installing any package inside that folder will add it into json file

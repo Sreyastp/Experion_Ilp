@@ -1,0 +1,114 @@
+use travel1
+
+db.createCollection('travelcollection1')
+
+db.travell.insert([
+
+    {
+	plan_id: 1,
+	plan_name: "Planone",
+    staringpoint:"Palakkad" ,
+    destination_name: "Delhi",
+    plan_price:1000,
+	Mode_of_transport: ["air", "road","rail"],
+    no_of_plans:3,
+    Plan_type:  { Business: {
+                            Planone: "Plandelhi",	
+                            Plantwo: "planguj",
+                            planthree: "planagra"
+                            },
+                            }            	
+    },
+    {
+	plan_id: 2,
+	plan_name: "Plantwo",
+    staringpoint:"ooty" ,
+    destination_name: "chennai",
+    plan_price:2000,
+	Mode_of_transport: ["road","rail"],
+    no_of_plans:2,
+    Plan_type:  { family: {
+                            Planone: "planahmbd",	
+                            Plantwo: "plangoa",
+                            
+                            },
+                            }            	
+    },
+    {
+	plan_id: 3,
+	plan_name: "planthree",
+    staringpoint:"kochi" ,
+    destination_name: "goa",
+    plan_price:3000,
+	Mode_of_transport: [ "road","rail"],
+    no_of_plans:4,
+    Plan_type:  { holiday: {
+                            Planone: "planabc",	
+                            Plantwo: "planefg",
+                            planthree: "planagra",
+                            planfour: "plansikkim"
+                            },
+                            }            	
+    },
+    {
+	plan_id: 4,
+	plan_name: "Planfour",
+    staringpoint:"Trivandrum" ,
+    destination_name: "banglore",
+    plan_price:4000,
+	Mode_of_transport: ["air", "road","rail"],
+    no_of_plans:2,
+    Plan_type:  { students: {
+                            Planone: "planjammu",	
+                            Plantwo: "planguj",
+                            },
+                            }            	
+    },
+    {
+	plan_id: 5,
+	plan_name: "Planfive",
+    staringpoint:"mysore" ,
+    destination_name: "kashmir",
+    plan_price:7000,
+	Mode_of_transport: ["air", "rail"],
+    no_of_plans:3,
+    
+    Plan_type:  { family: {
+                            Planone: "Plandelhi",	
+                            Plantwo: "planguj",
+                            planthree: "planagra"
+                            },
+                            }            	
+    }
+    
+])
+
+
+
+
+
+db.travelcollection1.find().pretty() 
+
+
+db.travelcollection1.find({"destination_name":"kashmir"}); 
+
+db.travelcollection1.find({},{"destination_name":1});
+
+
+
+db.travell.find({"destination_name":{ $elemMatch:{"no_of_plans":{$gt : 3}}); 
+
+{ $elemMatch:{"score":{$gt : 90}
+
+db.travell.find().sort({"no_of_plans":-1}).limit(1)
+
+db.travell.find({"destination_name" :"Delhi"}}
+
+
+db.travell.find({"destination_name":"kashmir"});
+
+
+db.travell.find({"destination_name":"Delhi"}).sort({"no_of_plans":-1}).limit(1)
+
+
+db.travell.find({"destination_name":"Delhi"},{"plan_name":1},{"staringpoint":0},{"plan_price":0},{"Plan_type":0},{"Mode_of_transport":0}).sort({"no_of_plans":-1}).limit(1)

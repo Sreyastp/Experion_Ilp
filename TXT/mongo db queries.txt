@@ -76,8 +76,9 @@ Development Stage:
 	based on requirments --- it may change--- out 
 
 
---display documents
-db.customer.find().pretty()
+--d
+db.customer.find().pretty()isplay documents
+
 
 db.customer.insert(
 {first_name: 'Samson',last_name: 'Sung2',age: 24,gender:"Male"}
