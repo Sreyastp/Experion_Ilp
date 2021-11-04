@@ -308,3 +308,35 @@ function reverseArr(input) {
 
 var a = [3,5,7,8]
 var b = reverseArr(a);
+
+//object contest
+const india = {
+    peru:'the country india',
+    independence: 1947,
+
+    describe(){
+        console.log(`$(this.peru) got independence on ${this.independence} `)
+    },
+}
+
+describe();
+
+
+//object contest
+const india = {
+    peru:'the country india',
+    independence: 1947,
+
+    details(){
+        flag:'tricolored'
+        currency:'inr'
+        printDetails(){
+            console.log(`$(this.flag) flag and money  ${this.currency} `)
+  
+        }
+          },
+}
+india.describe.printDetails()
+
+//function contest
+ function country()
