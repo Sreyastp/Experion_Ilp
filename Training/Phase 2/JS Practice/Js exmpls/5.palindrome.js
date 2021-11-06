@@ -1,25 +1,21 @@
-// program to check if the string is palindrome or not
+//To check whether a number is palindrome
 
-function checkPalindrome(str) {
+let checkString = "Madam";
+let tempString = "";
 
-    // find the length of a string
-    const len = string.length;
-
-    // loop through half of the string
-    for (let i = 0; i < len / 2; i++) {
-
-        // check if first and last string are same
-        if (string[i] !== string[len - 1 - i]) {
-            return 'It is not a palindrome';
-        }
-    }
-    return 'It is a palindrome';
+let countSample = 0;
+for(let s in checkString){
+    countSample+=1;
 }
 
-// take input
-const string = prompt('Enter a string: ');
 
-// call the function
-const value = checkPalindrome(string);
+for(let i = 0; i <countSample; i++){
+    tempString+=checkString[countSample-i-1];
+}
 
-console.log(value);
+if(checkString.toLowerCase() === tempString.toLowerCase()){
+    console.log(checkString, " is a palindrome");
+}
+else{
+    console.log(checkString, "Not a plaindrome");
+}
