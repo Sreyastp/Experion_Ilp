@@ -7,3 +7,6 @@ function phonenumber(err , data){
 fs.readdir('c:/' , phonenumber);
 
 console.log("this comes before");
+
+
+
