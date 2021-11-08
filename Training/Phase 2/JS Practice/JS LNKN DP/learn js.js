@@ -274,10 +274,48 @@ for(var i = 0 ; i<arrtst.length; i++){
 console.log(sum)
 
 
-multiarray = [[1,12,23],[2,3,3,4,4],[23,33,44,4]]
+
+//multi array 
+multiarray = [[1,2,2],[2,4],[3,4]]
 var product =1; 
 
 for(var i=0 ; i<multiarray.length ; i++){
     for(var j =0 ; j<multiarray[i].length ; j++)
      product *= multiarray[i][j];
 }
+ console.log(product)
+
+
+
+ //do while loop 
+var doarr = [ ];
+var i = 10;
+
+do{
+    doarr.push(i)
+    i++
+}while(i<6)
+
+console.log(i,doarr)
+
+
+//parse in function 
+
+function converttoint(str){
+    return parseInt(str);
+}
+
+console.log(converttoint("50"));
+
+//ternaryy operator
+
+function ret(a,b){
+    return a===b ? true : false;   //ie if a === b return true else false
+}
+
+//nested ternary operator
+function ter(num){
+    return num>0 ?  "positive" : num < 0 ? "negative" : "Zero" 
+ }
+
+ console.log(ter(10));
