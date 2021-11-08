@@ -272,3 +272,12 @@ for(var i = 0 ; i<arrtst.length; i++){
      sum += arrtst[i];
 }
 console.log(sum)
+
+
+multiarray = [[1,12,23],[2,3,3,4,4],[23,33,44,4]]
+var product =1; 
+
+for(var i=0 ; i<multiarray.length ; i++){
+    for(var j =0 ; j<multiarray[i].length ; j++)
+     product *= multiarray[i][j];
+}
