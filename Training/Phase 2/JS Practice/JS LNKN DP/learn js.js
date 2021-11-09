@@ -393,6 +393,74 @@ const forcast = {
 function temtrw(forct){
     const { tommorw : {max:temptmrww}} = forct ;
     return temptmrww;
-    ;
+    
 }
 console.log(temtrw(forcast))
+
+
+
+//destructuring of arrays
+//ie assigning the array elements into diff variables
+let [m,n,o,p, , ,g] = [1,2,3,4,5,6,7,8]
+console.log('the 7th araay element is copied in to g ie g =', g);
+
+[m,n] = [n,m]  ///changing variables
+
+console.log(m,n) //value of to m into n
+
+
+
+// //destructruring objects
+// const objj= {
+//     min :111,
+//     max:222,                     //entho error und 
+//     med:223,
+//     sd:21
+// }
+
+// const ress =function res({max , min}){
+//     console.log(max+min)
+// }
+
+// resss(objj);         //passing the object to a funnction
+
+
+
+
+// using bactics so nicely 
+const reslt = {
+    sucess:["ine","teo","terr"],
+    failure:["one","tree","add"]
+}
+
+function ul(pass){
+    const tarray = [];
+    for(i=0;i<pass.length;i++){
+        tarray.push(`<ul class="form"> ${pass[i]} </ul>`)
+    }
+        return tarray;
+}
+
+console.log(ul(reslt.sucess));
+
+
+//simple fields
+const createPerson = (namme , age , gender) => {
+    return {
+        name: namme , 
+        age: age,
+        gended: gender
+    }
+
+}
+
+// it can be alternatively writtern as 
+const createPerson1 = (namme , age , gender) => {         //easy way
+    return {namme , age, gender}
+
+}
+
+
+
+console.log(createPerson("sreyas",23,"male"))
+console.log(createPerson1("sreyastp",23,"male"))
