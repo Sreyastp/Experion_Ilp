@@ -319,3 +319,80 @@ function ter(num){
  }
 
  console.log(ter(10));
+
+
+//scope of let is only inside the block
+//var scope is not like that it is like global
+
+
+//anonymous function 
+//arrow function 
+const anfnn = () => new Date();   
+
+//arrow function with parameters
+const arrfn = (a,b) => a+b ;
+
+console.log(arrfn(12,32));
+
+//default parameters with arrow function 
+// const tempo = function(){
+//     return function test(a,b=2){          //default parameter (b=2)
+//         return a+b;
+//     }
+// }
+
+// console.log(test(3));
+// console.log(test(3,4));
+
+//rest operator is used to create an array from passed parameter
+//spread operator is used to spread the elements of the array into individual parts
+//these two are not used
+
+
+
+
+
+
+
+
+
+//destructuring of objects
+
+const cats = { a:2,b:3,c:4 };
+
+
+//to assign the values of the  object into a variable 
+//either do it like this ie --   var x = cats.a or do it like below 
+
+const { x: a, y:b , z:c} = cats
+
+
+///example 2
+const avg_temp = {
+today:33,
+tommorow:100    
+}
+
+function temptrw(){
+    const {tommorow : temptomrw } = avg_temp;
+    return temptomrw
+}
+
+console.log(temptrw(avg_temp));
+
+
+
+
+
+//destructuring of nested objects
+const forcast = {
+    today: {min:12,max:22 },
+    tommorw : { min: 33 , max: 101}
+}
+
+function temtrw(forct){
+    const { tommorw : {max:temptmrww}} = forct ;
+    return temptmrww;
+    ;
+}
+console.log(temtrw(forcast))
