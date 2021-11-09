@@ -464,3 +464,10 @@ const createPerson1 = (namme , age , gender) => {         //easy way
 
 console.log(createPerson("sreyas",23,"male"))
 console.log(createPerson1("sreyastp",23,"male"))
+
+
+//USING IMPORT multiple expport from a file
+//import * as somename from "./filename"
+// import {  xxxx } from "./filename"   //this is for no default import
+//for default import ------import xxx from "import name" 
+//default export is for only a particular thing from a file
