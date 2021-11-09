@@ -15,7 +15,7 @@ router.put('/', function(req, res, ) {
 });
 
 router.post('/', function(req, res, ) {
-  res.send("Got a Post request");
+  res.send("Got a product Post request");
 });
 
 router.delete('/', function(req, res, ) {
