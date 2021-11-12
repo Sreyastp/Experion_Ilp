@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 const db = new Sequelize('codegig', 'postgres', 'Welcome123', {
     host: 'localhost',
-    dialect: 'postgres',
+    dialect: 'sqlite',
 
     pool: {
         max: 5,
