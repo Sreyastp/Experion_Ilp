@@ -1,0 +1,8 @@
+@import "~antd/dist/antd.css";
+
+.App {
+    position: absolute;
+    overflow: auto;
+    height: 100%; /*Along with attribute:'position: absolute', it solved white bar issue when there is a vertical scroll bar. */
+    background-color: black;
+}

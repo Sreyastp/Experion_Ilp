@@ -1,0 +1,75 @@
+{
+  "name": "reactapp-demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^27.0.0",
+    "@ckeditor/ckeditor5-react": "^3.0.2",
+    "@material-ui/core": "^4.9.14",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/styles": "latest",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "antd": "^4.14.1",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.5.0",
+    "collections": "^5.1.12",
+    "env-cmd": "^10.1.0",
+    "node-sass": "^4.14.1",
+    "prop-types": "latest",
+    "quill": "^1.3.7",
+    "quill-delta": "^4.2.2",
+    "quill-delta-to-html": "^0.11.0",
+    "quill-image-drop-module": "^1.0.3",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.0",
+    "react-cookie": "^4.0.3",
+    "react-dom": "^16.13.1",
+    "react-icons": "^4.2.0",
+    "react-image-gallery": "^1.0.9",
+    "react-intl": "^5.15.2",
+    "react-intl-universal": "^2.4.3",
+    "react-native-fit-image": "^1.5.5",
+    "react-native-network-info": "^5.2.1",
+    "react-quill": "^2.0.0-beta.2",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "store": "^2.0.12",
+    "storm-react-diagrams": "^5.2.1",
+    "universal-cookie": "^4.0.3",
+    "use-file-picker": "^0.2.1",
+    "@ant-design/icons": "latest"
+  },
+  "scripts": {
+    "start:debug": "env-cmd -f .env.debug react-scripts start",
+    "start:debug.home": "env-cmd -f .env.debug.home react-scripts start",
+    "start:debug.auth": "env-cmd -f .env.debug.auth react-scripts start",
+    "start:debug.tomcat": "env-cmd -f .env.debug.tomcat react-scripts start",
+    "start:prod": "env-cmd -f .env.prod react-scripts start",
+    "build": "env-cmd -f .env.prod react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "axios-retry": "^3.1.9",
+    "umi-plugin-locale": "^2.11.6"
+  }
+}

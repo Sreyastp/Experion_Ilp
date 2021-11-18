@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap');
+
+.Dashboard {
+    background-color: black;
+    padding-top: 0.4em;
+    padding-bottom: 5em;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Abel', 'Noto Sans SC', cursive, sans-serif;
+}
+
+.Dashboard li {
+    margin-left: 0.05em;
+    margin-right: 0.05em;
+    margin-bottom: 0.5em;
+}
+
+@media only screen and (max-width: 800px) {
+    .Dashboard {
+        display: block;
+    }
+
+    .Dashboard li {
+        margin-bottom: 0.2em;
+    }
+}
+
+.Covid19Data {
+    font-size: 0.9em;
+}
+
+.Today {
+    font-weight: bold;
+    color: red;
+}
+
+.Test {
+    font-style: italic;
+    color: darkgreen;
+}
+
+
