@@ -10,14 +10,12 @@ function REG() {
   );
 }
 
-
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
   integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
   crossorigin="anonymous"
 />;
-
 
 function MyForm() {
   const [inputs, setInputs] = useState({});
@@ -35,7 +33,7 @@ function MyForm() {
   }
 
   return (
-    <div class="container-fluid">
+    <div class="container-fluid col-md-11">
       <h2 class="h3 text-black text-center bg-warning">
         Office Staff Registration Form
       </h2>
@@ -130,6 +128,5 @@ function MyForm() {
     </div>
   );
 }
-
 
 export default REG;

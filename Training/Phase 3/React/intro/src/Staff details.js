@@ -8,7 +8,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
   crossorigin="anonymous"
 />;
 
-
 function DETAILS() {
   return (
     <>
@@ -17,7 +16,6 @@ function DETAILS() {
     </>
   );
 }
-
 
 function CDetails() {
   const [inputs, setInputs] = useState({});
@@ -35,7 +33,7 @@ function CDetails() {
   }
 
   return (
-    <div class="container-fluid">
+    <div class="container-fluid col-md-11">
       <form onSubmit={handleSubmit}>
         <h2 class="h3 text-black text-center bg-warning">
           Office Details Entry Form
