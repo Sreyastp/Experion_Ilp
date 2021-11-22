@@ -1,6 +1,6 @@
 // import { Box, Typography, makeStyles } from "@material-ui/core";
-// import Youtube from '../Assets/Images/youtube.png';
-// import InstaTele from '../Assets/Images/InstaTele.jpeg';
+// // import Youtube from '../Assets/Images/youtube.png';
+// // import InstaTele from '../Assets/Images/InstaTele.jpeg';
 
 // const useStyles = makeStyles({
 //   component: {
@@ -20,7 +20,7 @@ const CodeForInterview = () => {
   return (
     <>
       <div class="container-fluid">
-        <h2>Home</h2>
+        <h2>Contact</h2>
         <p>
           lorem "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae

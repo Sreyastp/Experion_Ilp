@@ -20,7 +20,7 @@ const CodeForInterview = () => {
   return (
     <>
       <div class="container-fluid">
-        <h2>Home</h2>
+        <h2>About</h2>
         <p>
           lorem "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
