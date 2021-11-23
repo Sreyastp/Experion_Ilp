@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import RegistrationLogic from "./staff reg logic";
 
 function REG() {
   return (
@@ -30,6 +31,14 @@ function MyForm() {
   function handleSubmit(event) {
     event.preventDefault();
     console.log(inputs);
+
+    RegistrationLogic(
+      inputs.useremail,
+      inputs.userpassword,
+      inputs.userfirstname,
+      inputs.userlastname,
+      inputs.userpassword
+    );
   }
 
   return (

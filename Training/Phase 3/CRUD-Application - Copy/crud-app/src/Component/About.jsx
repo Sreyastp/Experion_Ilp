@@ -15,7 +15,7 @@
 //   },
 // });
 
-const CodeForInterview = () => {
+const About = () => {
   // const classes = useStyles();
   return (
     <>
@@ -56,4 +56,4 @@ const CodeForInterview = () => {
   );
 };
 
-export default CodeForInterview;
+export default About;

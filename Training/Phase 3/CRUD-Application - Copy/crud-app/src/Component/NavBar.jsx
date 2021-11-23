@@ -21,11 +21,17 @@ const NavBar = () => {
         <NavLink className={classes.tabs} to="./" exact>
           Home
         </NavLink>
+        <NavLink className={classes.tabs} to="contact" exact>
+          Contact
+        </NavLink>
+        <NavLink className={classes.tabs} to="about" exact>
+          About
+        </NavLink>
         <NavLink className={classes.tabs} to="all" exact>
-          Stafflist
+          Staff List
         </NavLink>
         <NavLink className={classes.tabs} to="add" exact>
-          RegisterStaff
+          Register
         </NavLink>
       </Toolbar>
     </AppBar>

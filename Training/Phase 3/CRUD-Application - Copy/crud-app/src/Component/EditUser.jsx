@@ -32,7 +32,7 @@ const useStyles = makeStyles({
 
 const EditUser = () => {
   const [user, setUser] = useState(initialValue);
-  const { firstname, lastname, email, phone, password, dateOfJoining } = user;
+  const { name, username, email, phone, password, dateOfJoining } = user;
   const { id } = useParams();
   const classes = useStyles();
   let history = useHistory();
@@ -63,8 +63,8 @@ const EditUser = () => {
         <InputLabel htmlFor="my-input">First Name</InputLabel>
         <Input
           onChange={(e) => onValueChange(e)}
-          name="name"
-          value={firstname}
+          name="firstname"
+          value={name}
           id="my-input"
           aria-describedby="my-helper-text"
         />
@@ -73,8 +73,8 @@ const EditUser = () => {
         <InputLabel htmlFor="my-input">Last Name</InputLabel>
         <Input
           onChange={(e) => onValueChange(e)}
-          name="username"
-          value={lastname}
+          name="lastname"
+          value={username}
           id="my-input"
           aria-describedby="my-helper-text"
         />
@@ -111,10 +111,10 @@ const EditUser = () => {
         />
       </FormControl>
       <FormControl>
-        <InputLabel htmlFor="my-input">DateOfJoining</InputLabel>
+        <InputLabel htmlFor="my-input">Date Of Joining</InputLabel>
         <Input
           onChange={(e) => onValueChange(e)}
-          name="DateOfJoining"
+          name="dateOfJoining"
           value={dateOfJoining}
           id="my-input"
           aria-describedby="my-helper-text"

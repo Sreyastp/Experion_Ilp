@@ -26,7 +26,7 @@ app.use("/users", Routes);
 // const URL = 'mongodb://user:Manrun89@cluster-first-shard-00-00.zgrax.mongodb.net:27017,cluster-first-shard-00-01.zgrax.mongodb.net:27017,cluster-first-shard-00-02.zgrax.mongodb.net:27017/CRUDAPP?ssl=true&replicaSet=atlas-dair4b-shard-0&authSource=admin&retryWrites=true&w=majority'
 // const URL = 'mongodb://user:codeforinterview@crudapp-shard-00-00.zgrax.mongodb.net:27017,crudapp-shard-00-01.zgrax.mongodb.net:27017,crudapp-shard-00-02.zgrax.mongodb.net:27017/CRUDAPP?ssl=true&replicaSet=atlas-as0xva-shard-0&authSource=admin&retryWrites=true&w=majority'
 const URL =
-  "mongodb+srv://Sreyas:Sreyas@99@cluster0.bbs4s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://Sreyas:Sreyas@99@cluster0.bbs4s.mongodb.net/PRODUCT0?retryWrites=true&w=majority";
 // const dotenv = require('dotenv'); //3 - but we need to tell express where to pick this port
 // It allows you to seperate your crediantials when we work in a collaborative environment
 const PORT = process.env.PORT || "8080"; //2 - get the port from env file, if not available pick 8080
