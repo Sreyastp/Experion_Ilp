@@ -8,5 +8,4 @@ mongoose
   })
   .catch(() => {
     console.log("No connection");
-  });
-//connect mobile 
+  }); //connection for mongo
