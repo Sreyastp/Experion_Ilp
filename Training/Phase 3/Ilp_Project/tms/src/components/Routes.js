@@ -30,9 +30,9 @@ function Routers() {
           Contact Us
         </Link>
 
-        <Link className="btn btn-primary mb-2 ms-2" to="/detailsentry">
+        {/* <Link className="btn btn-primary mb-2 ms-2" to="/detailsentry">
           Details Entry
-        </Link>
+        </Link> */}
 
         <Link className="btn btn-primary mb-2 ms-2" to="/stafflogin">
           Login

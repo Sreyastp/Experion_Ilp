@@ -1,17 +1,36 @@
-// const Sequelize = require('sequelize');
-// const db = require('../config/database');
+const Sequelize = require("sequelize");
+const db = require("../config/database");
 
-import mongoose from "mongoose";
-const { Schema } = mongoose;
-
-const blogSchema = new Schema({
-  id: Number,
-  email: String,
-  password: String,
-  first_name: String,
-  last_name: String,
-  mobile_no: Number,
-  date_of_joining: Date,
+const Staff = db.define("staffapp", {
+  id: {
+    type: Sequelize.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  email: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  password: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  first_name: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  last_name: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  mobile_no: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  date: {
+    type: Sequelize.DATE,
+    allowNull: false,
+  },
 });
 
-module.exports = blogSchema;
+module.exports = Staff;
