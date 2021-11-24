@@ -1,36 +1,18 @@
-const Sequelize = require("sequelize");
-const db = require("../config/database");
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const Staff = db.define("staffapp", {
-  id: {
-    type: Sequelize.INTEGER,
-    primaryKey: true,
-    autoIncrement: true,
-  },
-  email: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
-  password: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
-  first_name: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
-  last_name: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
-  mobile_no: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
+const staffSchema = new mongoose.Schema({
+  first_name: { type: String, required: true },
+  last_name: { type: String, required: true },
+  email: { type: String, required: true },
+  password: { type: String, required: true },
+  mobile_no: { type: Number, required: true },
+
   date: {
-    type: Sequelize.DATE,
-    allowNull: false,
+    type: Date,
   },
 });
+
+const Staff = mongoose.model("Staff", staffSchema);
 
 module.exports = Staff;
