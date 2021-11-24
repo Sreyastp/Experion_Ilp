@@ -1,4 +1,3 @@
-// const Staff = require("../models/Staff");
 const Staff = require("../models/Staff");
 var staffDao = {
   findAll: findAll,
